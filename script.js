@@ -11,9 +11,9 @@ const buttnHold = document.querySelector('.btn--hold');
 scorePlayer1.textContent = 0;
 scorePlayer2.textContent = 0;
 diceElement.classList.add('hidden');
-
-const currentScoreP1 = document.getElementById('current--0');
-const currentScoreP2 = document.getElementById('current--1');
+let currentScore = 0;
+let currentScoreP1 = document.getElementById('current--0');
+let currentScoreP2 = document.getElementById('current--1');
 
 //Rolling dice functionnality
 buttnRoll.addEventListener('click', function () {
@@ -23,4 +23,11 @@ buttnRoll.addEventListener('click', function () {
   diceElement.classList.remove('hidden');
   diceElement.src = `dice-${dice}.png`;
   // 3. Check for rolled 1: if true, switch player
+  console.log(dice);
+  if (dice !== 1) {
+    currentScore += dice;
+    if (document.querySelector()) currentScoreP1.textContent = currentScore; //FIX change later
+  } else {
+    //Switch next player
+  }
 });
