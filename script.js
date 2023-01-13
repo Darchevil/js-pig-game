@@ -21,6 +21,6 @@ buttnRoll.addEventListener('click', function () {
   let dice = Math.trunc(Math.random() * 6) + 1;
   // 2. Display the dice
   diceElement.classList.remove('hidden');
-  diceElement.src = `dice-${dice}`;
+  diceElement.src = `dice-${dice}.png`;
   // 3. Check for rolled 1: if true, switch player
 });
