@@ -14,6 +14,8 @@ diceElement.classList.add('hidden');
 let currentScore = 0;
 let currentScoreP1 = document.getElementById('current--0');
 let currentScoreP2 = document.getElementById('current--1');
+let scores = [0, 0];
+let activePlayer = 0;
 
 //Rolling dice functionnality
 buttnRoll.addEventListener('click', function () {
@@ -26,7 +28,8 @@ buttnRoll.addEventListener('click', function () {
   console.log(dice);
   if (dice !== 1) {
     currentScore += dice;
-    if (document.querySelector()) currentScoreP1.textContent = currentScore; //FIX change later
+    document.getElementById(`current--${activePlayer}`);
+    currentScoreP1.textContent = currentScore; //FIX change later
   } else {
     //Switch next player
   }
